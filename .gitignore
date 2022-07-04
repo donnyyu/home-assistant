@@ -9,7 +9,7 @@ id_rsa*
 .ssh
 
 configurator-config/
-
+portainer/portainer_data/portainer.db
 hass-config/
 hass-config/.storage/*
 vscode/
