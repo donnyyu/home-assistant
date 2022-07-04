@@ -11,7 +11,7 @@ id_rsa*
 configurator-config/
 portainer/portainer_data/portainer.db
 hass-config/
-hass-config/.storage/*
+hass-config/.storage/
 vscode/
 zigbee2mqtt/
 zigbee2mqtt/data/*
