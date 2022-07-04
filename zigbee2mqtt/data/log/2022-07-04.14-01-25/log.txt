@@ -26,3 +26,4 @@ info  2022-07-04 14:02:50: MQTT publish: topic 'zigbee2mqtt/TempHumi-sensor', pa
 info  2022-07-04 14:04:04: MQTT publish: topic 'zigbee2mqtt/TempHumi-sensor', payload '{"battery":89,"humidity":51.53,"linkquality":63,"power_outage_count":1371,"temperature":19.89,"voltage":2935}'
 info  2022-07-04 14:37:35: MQTT publish: topic 'zigbee2mqtt/TempHumi-sensor', payload '{"battery":89,"humidity":51.53,"linkquality":87,"power_outage_count":1371,"temperature":19.53,"voltage":2935}'
 info  2022-07-04 14:37:35: MQTT publish: topic 'zigbee2mqtt/TempHumi-sensor', payload '{"battery":89,"humidity":51.73,"linkquality":84,"power_outage_count":1371,"temperature":19.53,"voltage":2935}'
+info  2022-07-04 15:03:20: MQTT publish: topic 'zigbee2mqtt/TempHumi-sensor', payload '{"battery":89,"humidity":52.98,"linkquality":87,"power_outage_count":1371,"temperature":19.17,"voltage":2935}'
