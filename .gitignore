@@ -8,6 +8,9 @@ home-assistant.log*
 id_rsa*
 .ssh
 
+**/logs
+**/log
+
 configurator-config/
 portainer/portainer_data/portainer.db
 hass-config/
