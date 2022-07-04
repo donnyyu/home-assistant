@@ -1,12 +1,20 @@
 # Home Assistant
 home-assistant docker-compose
+
 configurator-config
+
 mariadb
+
 mosquitto
+
 nodered
+
 portainer
+
 vscode
+
 zigbee2mqtt
+
 
 
 # Give your user permissions to access /dev/ttyUSB0 on every reboot
