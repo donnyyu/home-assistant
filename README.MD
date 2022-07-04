@@ -43,3 +43,7 @@ KERNEL=="ttyACM[0-9]*",MODE="0666"
 '''
     
 Unplug the device and replug it, and it should be read/write from any user!
+
+
+## Please refer to this site if you need detailed setup
+https://iotechonline.com/home-assistant-install-with-docker-compose
