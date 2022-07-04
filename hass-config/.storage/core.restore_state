@@ -26,7 +26,7 @@
                 }
             },
             "extra_data": null,
-            "last_seen": "2022-07-04T05:47:17.724707+00:00"
+            "last_seen": "2022-07-04T06:02:17.725640+00:00"
         },
         {
             "state": {
@@ -48,7 +48,7 @@
                 }
             },
             "extra_data": null,
-            "last_seen": "2022-07-04T05:47:17.724707+00:00"
+            "last_seen": "2022-07-04T06:02:17.725640+00:00"
         },
         {
             "state": {
@@ -67,7 +67,7 @@
                 }
             },
             "extra_data": null,
-            "last_seen": "2022-07-04T05:47:17.724707+00:00"
+            "last_seen": "2022-07-04T06:02:17.725640+00:00"
         },
         {
             "state": {
@@ -86,7 +86,7 @@
                 }
             },
             "extra_data": null,
-            "last_seen": "2022-07-04T05:47:17.724707+00:00"
+            "last_seen": "2022-07-04T06:02:17.725640+00:00"
         },
         {
             "state": {
@@ -105,7 +105,7 @@
                 }
             },
             "extra_data": null,
-            "last_seen": "2022-07-04T05:47:17.724707+00:00"
+            "last_seen": "2022-07-04T06:02:17.725640+00:00"
         },
         {
             "state": {
@@ -127,7 +127,7 @@
                 }
             },
             "extra_data": null,
-            "last_seen": "2022-07-04T05:47:17.724707+00:00"
+            "last_seen": "2022-07-04T06:02:17.725640+00:00"
         },
         {
             "state": {
@@ -147,7 +147,7 @@
                 }
             },
             "extra_data": null,
-            "last_seen": "2022-07-04T05:47:17.724707+00:00"
+            "last_seen": "2022-07-04T06:02:17.725640+00:00"
         },
         {
             "state": {
@@ -173,7 +173,7 @@
                 }
             },
             "extra_data": null,
-            "last_seen": "2022-07-04T05:47:17.724707+00:00"
+            "last_seen": "2022-07-04T06:02:17.725640+00:00"
         },
         {
             "state": {
@@ -182,19 +182,19 @@
                 "attributes": {
                     "state_class": "measurement",
                     "battery": 89,
-                    "humidity": 53.4,
-                    "linkquality": 81,
+                    "humidity": 52.04,
+                    "linkquality": 48,
                     "power_outage_count": 1371,
-                    "temperature": 19.54,
+                    "temperature": 20.15,
                     "voltage": 2935,
                     "unit_of_measurement": "%",
                     "device_class": "battery",
                     "friendly_name": "TempHumi-sensor battery"
                 },
                 "last_changed": "2022-07-04T04:02:50.984557+00:00",
-                "last_updated": "2022-07-04T05:43:57.270148+00:00",
+                "last_updated": "2022-07-04T05:58:55.007254+00:00",
                 "context": {
-                    "id": "01G73VS8JPQS5KRRTEBSKANVWN",
+                    "id": "01G73WMN8ZDFKG0YWV5Y3SP9P0",
                     "parent_id": null,
                     "user_id": null
                 }
@@ -203,67 +203,67 @@
                 "native_value": "89",
                 "native_unit_of_measurement": "%"
             },
-            "last_seen": "2022-07-04T05:47:17.724707+00:00"
+            "last_seen": "2022-07-04T06:02:17.725640+00:00"
         },
         {
             "state": {
                 "entity_id": "sensor.temphumi_sensor_temperature",
-                "state": "19.54",
+                "state": "20.15",
                 "attributes": {
                     "state_class": "measurement",
                     "battery": 89,
-                    "humidity": 53.4,
-                    "linkquality": 81,
+                    "humidity": 52.04,
+                    "linkquality": 48,
                     "power_outage_count": 1371,
-                    "temperature": 19.54,
+                    "temperature": 20.15,
                     "voltage": 2935,
                     "unit_of_measurement": "\u00b0C",
                     "device_class": "temperature",
                     "friendly_name": "TempHumi-sensor temperature"
                 },
-                "last_changed": "2022-07-04T05:43:57.262257+00:00",
-                "last_updated": "2022-07-04T05:43:57.270764+00:00",
+                "last_changed": "2022-07-04T05:58:55.008600+00:00",
+                "last_updated": "2022-07-04T05:58:55.008600+00:00",
                 "context": {
-                    "id": "01G73VS8JP321G7V823ZNVAP8M",
+                    "id": "01G73WMN90A1NZK0T33DTZGRCX",
                     "parent_id": null,
                     "user_id": null
                 }
             },
             "extra_data": {
-                "native_value": "19.54",
+                "native_value": "20.15",
                 "native_unit_of_measurement": "\u00b0C"
             },
-            "last_seen": "2022-07-04T05:47:17.724707+00:00"
+            "last_seen": "2022-07-04T06:02:17.725640+00:00"
         },
         {
             "state": {
                 "entity_id": "sensor.temphumi_sensor_humidity",
-                "state": "53.4",
+                "state": "52.04",
                 "attributes": {
                     "state_class": "measurement",
                     "battery": 89,
-                    "humidity": 53.4,
-                    "linkquality": 81,
+                    "humidity": 52.04,
+                    "linkquality": 48,
                     "power_outage_count": 1371,
-                    "temperature": 19.54,
+                    "temperature": 20.15,
                     "voltage": 2935,
                     "unit_of_measurement": "%",
                     "device_class": "humidity",
                     "friendly_name": "TempHumi-sensor humidity"
                 },
-                "last_changed": "2022-07-04T05:43:57.272045+00:00",
-                "last_updated": "2022-07-04T05:43:57.272045+00:00",
+                "last_changed": "2022-07-04T05:58:55.008989+00:00",
+                "last_updated": "2022-07-04T05:58:55.008989+00:00",
                 "context": {
-                    "id": "01G73VS8JR46J601N9RSEM4X78",
+                    "id": "01G73WMN901M1261QJKA9H55MM",
                     "parent_id": null,
                     "user_id": null
                 }
             },
             "extra_data": {
-                "native_value": "53.4",
+                "native_value": "52.04",
                 "native_unit_of_measurement": "%"
             },
-            "last_seen": "2022-07-04T05:47:17.724707+00:00"
+            "last_seen": "2022-07-04T06:02:17.725640+00:00"
         },
         {
             "state": {

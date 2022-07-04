@@ -14,6 +14,7 @@ hass-config/
 
 vscode/
 zigbee2mqtt/
+zigbee2mqtt/data/*
 mariadb/
 portainer/
 mosquitto/
