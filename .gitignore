@@ -14,3 +14,4 @@ id_rsa*
 mariadb
 portainer
 mosquitto
+nodered
