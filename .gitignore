@@ -2,6 +2,7 @@
 !.gitignore
 !*.sh
 !*.md
+!vscode/config/code-server/config.yaml
 
 .env
 home-assistant.log*
@@ -15,6 +16,7 @@ configurator-config/
 portainer/portainer_data/portainer.db
 hass-config/
 hass-config/.storage/
+vscode/User
 vscode/
 zigbee2mqtt/
 zigbee2mqtt/data/*
