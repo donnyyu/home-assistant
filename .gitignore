@@ -4,19 +4,17 @@
 !*.md
 
 .env
-hass-config/.cloud
-hass-config/.storage
 home-assistant.log*
 id_rsa*
 .ssh
 
-configurator-config
+configurator-config/
 
-hass-config   
+hass-config/
 
-vscode  
-zigbee2mqtt
-mariadb
-portainer
-mosquitto
-nodered
+vscode/
+zigbee2mqtt/
+mariadb/
+portainer/
+mosquitto/
+nodered/

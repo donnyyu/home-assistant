@@ -3,8 +3,8 @@
         "voltage": 2935,
         "battery": 89,
         "power_outage_count": 1371,
-        "temperature": 19.17,
-        "humidity": 52.98,
-        "linkquality": 63
+        "temperature": 20.06,
+        "humidity": 52.92,
+        "linkquality": 90
     }
 }

@@ -102,13 +102,14 @@
                                     "entity": "sun.sun"
                                 },
                                 {
-                                    "entity": "sensor.temperature_lumi_158d0003502734"
+                                    "entity": "sensor.temphumi_sensor_temperature"
                                 },
                                 {
-                                    "entity": "sensor.humidity_lumi_158d0003502734"
+                                    "entity": "sensor.temphumi_sensor_humidity"
                                 }
                             ],
-                            "hours_to_show": 168,
+                            "title": "TempHumi",
+                            "hours_to_show": 240,
                             "refresh_interval": 20
                         }
                     ]
