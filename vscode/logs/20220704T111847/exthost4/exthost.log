@@ -1,0 +1,17 @@
+[2022-07-04 11:33:48.974] [exthost] [info] Extension host with pid 262 started
+[2022-07-04 11:33:49.030] [exthost] [info] Lock '/home/coder/.local/share/code-server/User/workspaceStorage/-355761b7/vscode.lock': Lock acquired.
+[2022-07-04 11:33:49.100] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: true, activationEvent: '*'
+[2022-07-04 11:33:49.118] [exthost] [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+[2022-07-04 11:33:49.132] [exthost] [info] ExtensionService#_doActivateExtension vscode.ipynb, startup: true, activationEvent: '*'
+[2022-07-04 11:33:49.625] [exthost] [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+[2022-07-04 11:33:49.834] [exthost] [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+[2022-07-04 11:33:50.060] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onStartupFinished'
+[2022-07-04 11:33:50.112] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+[2022-07-04 11:33:50.124] [exthost] [info] Eager extensions activated
+[2022-07-04 11:33:50.949] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 2980
+[2022-07-04 11:33:57.250] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 2980
+[2022-07-04 11:34:06.980] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 2980
+[2022-07-04 11:34:16.470] [exthost] [warning] [Decorations] CAPPING events from decorations provider vscode.git 2980
+[2022-07-04 11:34:20.330] [exthost] [info] Extension host terminating: received terminate message from renderer
+[2022-07-04 11:34:20.332] [exthost] [info] Lock '/home/coder/.local/share/code-server/User/workspaceStorage/-355761b7/vscode.lock': Marking the lockfile as scheduled to be released in 6000 ms.
+[2022-07-04 11:34:20.359] [exthost] [info] Extension host with pid 262 exiting with code 0

@@ -1,0 +1,14 @@
+frontend:
+  port: 9442
+homeassistant: true
+permit_join: true
+mqtt:
+  base_topic: zigbee2mqtt
+  server: mqtt://192.168.50.202:1883
+serial:
+  #port: /dev/ttyUSB.CC2531-01
+  port: /dev/ttyUSB0
+devices:
+  '0x00158d0003502734':
+    friendly_name: TempHumi-sensor
+    availability: true

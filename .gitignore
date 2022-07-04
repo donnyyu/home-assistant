@@ -1,0 +1,16 @@
+!*.yaml
+!.gitignore
+!*.sh
+!*.md
+
+.env
+hass-config
+hass-config/.storage/auth
+home-assistant.log*
+id_rsa*
+.ssh
+
+
+mariadb
+portainer
+mosquitto

@@ -1,0 +1,36 @@
+default_config:
+panel_iframe:
+  configurator:
+    title: Configurator
+    icon: mdi:wrench
+    url: http://192.168.50.202:3218/
+    require_admin: true
+  nodered:
+    title: Node-Red
+    icon: mdi:shuffle-variant
+    url: http://192.168.50.202:1880/
+    require_admin: true
+  portaniner:
+    title: Portainer
+    icon: mdi:docker
+    url: http://192.168.50.202:9000/#/containers
+    require_admin: true
+  zigbee2mqtt:
+    title: Zigbee2MQTT
+    icon: mdi:bee
+    url: http://192.168.50.202:9442/
+    require_admin: true
+  vscode:
+    title: VSCode
+    icon: mdi:application-brackets
+    url: http://192.168.50.202:8443/
+    require_admin: true
+mqtt:
+  broker: 192.168.50.202
+  
+recorder:
+  db_url: mysql://homeassistant:ha_dbdatabasepassword@192.168.50.202/ha_db?charset=utf8
+  purge_keep_days: 30
+  include:
+    domains:
+      - sensor

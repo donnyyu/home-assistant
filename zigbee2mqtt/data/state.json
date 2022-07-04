@@ -1,0 +1,10 @@
+{
+    "0x00158d0003502734": {
+        "voltage": 2935,
+        "battery": 89,
+        "power_outage_count": 1371,
+        "temperature": 19.89,
+        "humidity": 51.53,
+        "linkquality": 63
+    }
+}

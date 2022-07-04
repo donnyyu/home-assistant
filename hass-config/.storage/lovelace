@@ -1,0 +1,119 @@
+{
+    "version": 1,
+    "minor_version": 1,
+    "key": "lovelace",
+    "data": {
+        "config": {
+            "title": "Home",
+            "views": [
+                {
+                    "path": "default_view",
+                    "title": "Home",
+                    "cards": [
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "sensor.temphumi_sensor_humidity",
+                                    "name": "Humidity"
+                                },
+                                {
+                                    "entity": "sensor.temphumi_sensor_temperature",
+                                    "name": "Temperature"
+                                }
+                            ],
+                            "title": "TempHumi-sensor"
+                        },
+                        {
+                            "type": "thermostat",
+                            "entity": "climate.louge"
+                        },
+                        {
+                            "type": "thermostat",
+                            "entity": "climate.dining"
+                        },
+                        {
+                            "type": "thermostat",
+                            "entity": "climate.bedroom"
+                        },
+                        {
+                            "type": "entities",
+                            "entities": [
+                                {
+                                    "entity": "sensor.louge_compressor_frequency",
+                                    "name": "Compressor Frequency"
+                                },
+                                {
+                                    "entity": "sensor.louge_cool_energy_consumption",
+                                    "name": "Cool Energy Consumption"
+                                },
+                                {
+                                    "entity": "sensor.louge_estimated_power_consumption",
+                                    "name": "Estimated Power Consumption"
+                                },
+                                {
+                                    "entity": "sensor.louge_heat_energy_consumption",
+                                    "name": "Heat Energy Consumption"
+                                },
+                                {
+                                    "entity": "sensor.louge_humidity",
+                                    "name": "Humidity"
+                                },
+                                {
+                                    "entity": "sensor.louge_inside_temperature",
+                                    "name": "Inside Temperature"
+                                },
+                                {
+                                    "entity": "sensor.louge_outside_temperature",
+                                    "name": "Outside Temperature"
+                                },
+                                {
+                                    "entity": "sensor.louge_target_humidity",
+                                    "name": "Target Humidity"
+                                },
+                                {
+                                    "entity": "sensor.louge_today_s_total_energy_consumption",
+                                    "name": "Today's Total Energy Consumption"
+                                }
+                            ],
+                            "title": "Louge"
+                        },
+                        {
+                            "type": "history-graph",
+                            "entities": [
+                                {
+                                    "entity": "sun.sun"
+                                },
+                                {
+                                    "entity": "sensor.louge_inside_temperature"
+                                },
+                                {
+                                    "entity": "climate.louge"
+                                }
+                            ],
+                            "title": "Temp-Humi",
+                            "hours_to_show": 24,
+                            "refresh_interval": 20
+                        },
+                        {
+                            "type": "history-graph",
+                            "entities": [
+                                {
+                                    "entity": "sun.sun"
+                                },
+                                {
+                                    "entity": "sensor.temperature_lumi_158d0003502734"
+                                },
+                                {
+                                    "entity": "sensor.humidity_lumi_158d0003502734"
+                                }
+                            ],
+                            "hours_to_show": 168,
+                            "refresh_interval": 20
+                        }
+                    ]
+                }
+            ]
+        }
+    }
+}

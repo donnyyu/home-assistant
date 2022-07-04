@@ -1,0 +1,110 @@
+version: '3'
+services:
+  homeassistant:
+    container_name: hass
+    image: homeassistant/home-assistant
+    volumes:
+      - ./hass-config:/config
+      - /etc/localtime:/etc/localtime:ro
+    restart: unless-stopped
+    network_mode: host
+    depends_on:
+      - mariadb
+      - mosquitto
+  mariadb:
+    image: linuxserver/mariadb
+    container_name: mariadb
+    restart: unless-stopped
+    environment:
+      MYSQL_ROOT_PASSWORD: "${MYSQL_ROOT_PASSWORD}"
+      MYSQL_DATABASE: ha_db
+      MYSQL_USER: homeassistant
+      MYSQL_PASSWORD: "${HA_MYSQL_PASSWORD}"
+      PUID: 1000
+      PGID: 1000
+    volumes:
+      - ./mariadb:/config
+    ports:
+      - "3306:3306"
+  nodered:
+    container_name: nodered
+    image: nodered/node-red
+    ports:
+      - "1880:1880"
+    volumes:
+      - ./nodered:/data
+    depends_on:
+      - homeassistant
+      - mosquitto
+    environment:
+      TZ: "Australia/Hobart"
+    restart: unless-stopped
+  mosquitto:
+    image: eclipse-mosquitto
+    container_name: mosquitto
+    restart: unless-stopped
+    ports:
+      - "1883:1883"
+      - "1884:1884"
+    volumes:
+      - "./mosquitto/config:/mosquitto/config"
+      - "./mosquitto/data:/mosquitto/data"
+      - "./mosquitto/log:/mosquitto/log"
+    environment:
+      - TZ=Australia/Hobart
+    user: "${PUID}:${PGID}"
+  hass-configurator:
+    image: "causticlab/hass-configurator-docker:x86_64"
+    container_name: hass-configurator
+    restart: unless-stopped
+    ports:
+      - "3218:3218/tcp"
+    depends_on:
+      - homeassistant
+    volumes:
+      - "./configurator-config:/config"
+      - "./hass-config:/hass-config"
+    user: "${PUID}:${PGID}"
+  portainer:
+    ports:
+      - "9000:9000"
+    container_name: portainer
+    restart: unless-stopped
+    volumes:
+      - "/var/run/docker.sock:/var/run/docker.sock"
+      - "./portainer/portainer_data:/data"
+    image: portainer/portainer-ce
+  zigbee2mqtt:
+    container_name: zigbee2mqtt
+    image: koenkk/zigbee2mqtt
+    restart: unless-stopped
+    volumes:
+      - ./zigbee2mqtt/data:/app/data
+      - /run/udev:/run/udev:ro
+    ports:
+      # Frontend port
+      - "9442:9442"
+    environment:
+      - TZ=Australia/Hobart
+    devices:
+      # Make sure this matched your adapter location
+      - /dev/ttyUSB0:/dev/ttyUSB0
+    user: "${PUID}:${PGID}"
+  vscode:
+    container_name: vscode
+    image: codercom/code-server:latest
+    restart: unless-stopped
+#    network_mode: host
+    ports:
+      - "8443:8080"
+    environment:
+      - TZ=Australia/Hobart
+#      - PASSWORD="${VSCODE_PASSWORD}"
+#      - PASSWORD=password
+#      - HOMEASSISTANT_URL=http://localhost:8123
+    volumes:
+      - "./vscode/config:/home/coder/.config"
+      - "./vscode:/home/coder/.local/share/code-server"
+      - ".:/home/coder/project"
+    user: "${PUID}:${PGID}"
+#    command: code-server --auth password --disable-telemetry /home/coder/project
