@@ -36,4 +36,4 @@ recorder:
       - sensor
 
 shell_command:
-  pushupdates_to_github: bash pushupdates.sh
+  pushupdates_to_github: bash ~/hass/pushupdates.sh
