@@ -3,6 +3,7 @@
 !*.sh
 !*.md
 !vscode/config/code-server/config.yaml
+!hass-config/*.sh
 
 .env
 home-assistant.log*
