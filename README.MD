@@ -1,5 +1,6 @@
 # Home Assistant
 OS: Ubuntu 20.10
+
 home-assistant docker-compose method
 
 configurator
