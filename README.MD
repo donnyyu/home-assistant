@@ -1,7 +1,8 @@
 # Home Assistant
-home-assistant docker-compose
+OS: Ubuntu 20.10
+home-assistant docker-compose method
 
-configurator-config
+configurator
 
 mariadb
 
@@ -15,6 +16,7 @@ vscode
 
 zigbee2mqtt
 
+esphome
 
 
 # Give your user permissions to access /dev/ttyUSB0 on every reboot
