@@ -27,7 +27,7 @@ panel_iframe:
     require_admin: true
   esphome:
     title: ESPhome
-    icon: mdi:alpha-e-box-outline
+    icon: mdi:car-esp
     url: http://192.168.50.202:6052/
     require_admin: true  
 mqtt:
