@@ -34,6 +34,3 @@ recorder:
   include:
     domains:
       - sensor
-
-shell_command:
-  pushupdates_to_github: /bin/bash pushupdates.sh
