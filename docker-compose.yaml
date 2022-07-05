@@ -108,3 +108,18 @@ services:
       - ".:/home/coder/project"
     user: "${PUID}:${PGID}"
 #    command: code-server --auth password --disable-telemetry /home/coder/project
+  esphome:
+    container_name: esphome
+    image: esphome/esphome
+    volumes:
+      - "./esphome/config:/config"
+      - "/etc/localtime:/etc/localtime:ro"
+    restart: always
+    #network_mode: host
+    privileged: true
+    ports:
+      - 6052:6052
+      - 6123:6123
+    environment:
+      - TZ=Australia/Hobart
+    user: "${PUID}:${PGID}"

@@ -25,6 +25,11 @@ panel_iframe:
     icon: mdi:application-brackets
     url: http://192.168.50.202:8443/
     require_admin: true
+  esphome:
+    title: ESPhome
+    icon: mdi:alpha-e-box-outline
+    url: http://192.168.50.202:6052/
+    require_admin: true  
 mqtt:
   broker: 192.168.50.202
   
