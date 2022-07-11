@@ -109,22 +109,28 @@ services:
       - ".:/home/coder/project"
     user: "${PUID}:${PGID}"
 #    command: code-server --auth password --disable-telemetry /home/coder/project
-  esphome:
-    container_name: esphome
-    image: esphome/esphome
-    volumes:
-      - "./esphome/config:/config:rw"
-      - "/etc/localtime:/etc/localtime:ro"
-    restart: always
-#    network_mode: host
-#    privileged: true
-    ports:
-      - 6052:6052
-#      - 6123:6123
-    environment:
-#      - ESPHOME_DASHBOARD_USE_PING=true
-      - TZ=Australia/Hobart
-#    user: "${PUID}:${PGID}"
-    devices:
-      # Make sure this matched your adapter location
-      - /dev/serial/by-id/usb-Silicon_Labs_CP2104_USB_to_UART_Bridge_Controller_01572719-if00-port0:/dev/ttyUSB1
+#   esphome:
+#     container_name: esphome
+#     image: esphome/esphome
+#     volumes:
+#       - "./esphome/config:/config:rw"
+#       - "./esphome/cache:/cache:rw"
+#       - "/etc/localtime:/etc/localtime:ro"
+#     restart: unless-stopped
+#     network_mode: host
+#     ports:
+#       - 6052:6052
+#     environment:
+#       - PLATFORMIO_CORE_DIR=/cache/platformio
+#       - PLATFORMIO_GLOBALLIB_DIR=/cache/platformio/lib
+#       - PLATFORMIO_SETTING_ENABLE_TELEMETRY=No
+#       - PLATFORMIO_SETTING_CHECK_PLATFORMIO_INTERVAL=665
+#       - PLATFORMIO_SETTING_CHECK_PLATFORMS_INTERVAL=666
+#       - PLATFORMIO_SETTING_CHECK_LIBRARIES_INTERVAL=667
+#       - TZ=Australia/Hobart
+#       - VIRTUAL_HOST=esphome.local
+# #    command: dashboard /config --password '123456'
+#     user: "${PUID}:${PGID}"
+# #    devices:
+#       # Make sure this matched your adapter location
+# #      - /dev/serial/by-id/usb-Silicon_Labs_CP2104_USB_to_UART_Bridge_Controller_01572719-if00-port0:/dev/ttyUSB1

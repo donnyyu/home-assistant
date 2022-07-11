@@ -27,8 +27,8 @@ panel_iframe:
     require_admin: true
   esphome:
     title: ESPhome
-    icon: mdi:car-esp
-    url: http://192.168.50.202:6052/
+    icon: mdi:chip
+    url: http://192.168.50.5:6052/
     require_admin: true  
 #mqtt:
 #  broker: 192.168.50.202

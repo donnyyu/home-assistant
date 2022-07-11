@@ -25,3 +25,4 @@ mariadb/
 portainer/
 mosquitto/
 nodered/
+esphome/cache

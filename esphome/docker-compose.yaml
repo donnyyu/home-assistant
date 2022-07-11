@@ -1,0 +1,36 @@
+version: '3'
+services:
+  esphome:
+    container_name: esphome
+    image: esphome/esphome
+    volumes:
+      - "./config:/config:rw"
+      - "./cache:/cache:rw"
+      - "/etc/localtime:/etc/localtime:ro"
+    restart: unless-stopped
+    networks:
+      esphome_vlan:
+        ipv4_address: 192.168.50.5   # <-- Update
+    ports:
+      - 6052:6052
+    environment:
+      - PLATFORMIO_CORE_DIR=/cache/platformio
+      - PLATFORMIO_GLOBALLIB_DIR=/cache/platformio/lib
+      - PLATFORMIO_SETTING_ENABLE_TELEMETRY=No
+      - PLATFORMIO_SETTING_CHECK_PLATFORMIO_INTERVAL=665
+      - PLATFORMIO_SETTING_CHECK_PLATFORMS_INTERVAL=666
+      - PLATFORMIO_SETTING_CHECK_LIBRARIES_INTERVAL=667
+      - TZ=Australia/Hobart
+      - VIRTUAL_HOST=esphome.local
+#    command: dashboard /config --password '123456'
+    user: "${PUID}:${PGID}"
+networks:
+  esphome_vlan:
+    driver: macvlan
+    driver_opts:
+      parent: ens16
+    ipam:
+      config:
+        - subnet: "192.168.50.0/24"
+          ip_range: "192.168.50.1/28"
+          gateway: "192.168.50.1"
