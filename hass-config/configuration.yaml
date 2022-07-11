@@ -30,8 +30,8 @@ panel_iframe:
     icon: mdi:car-esp
     url: http://192.168.50.202:6052/
     require_admin: true  
-mqtt:
-  broker: 192.168.50.202
+#mqtt:
+#  broker: 192.168.50.202
   
 recorder:
   db_url: mysql://homeassistant:ha_dbdatabasepassword@192.168.50.202/ha_db?charset=utf8

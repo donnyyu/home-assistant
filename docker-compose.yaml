@@ -88,7 +88,8 @@ services:
       - TZ=Australia/Hobart
     devices:
       # Make sure this matched your adapter location
-      - /dev/ttyUSB0:/dev/ttyUSB0
+      - /dev/serial/by-id/usb-ITead_Sonoff_Zigbee_3.0_USB_Dongle_Plus_1233a05dba5fec11ad86395f25bfaa52-if00-port0:/dev/ttyUSB0
+      #- /dev/serial/by-id/usb-ITead_Sonoff_Zigbee_3.0_USB_Dongle_Plus_1233a05dba5fec11ad86395f25bfaa52-if00-port0:/dev/serial/by-id/usb-ITead_Sonoff_Zigbee_3.0_USB_Dongle_Plus_1233a05dba5fec11ad86395f25bfaa52-if00-port0
     user: "${PUID}:${PGID}"
   vscode:
     container_name: vscode
@@ -112,14 +113,18 @@ services:
     container_name: esphome
     image: esphome/esphome
     volumes:
-      - "./esphome/config:/config"
+      - "./esphome/config:/config:rw"
       - "/etc/localtime:/etc/localtime:ro"
     restart: always
-    #network_mode: host
-    privileged: true
+#    network_mode: host
+#    privileged: true
     ports:
       - 6052:6052
-      - 6123:6123
+#      - 6123:6123
     environment:
+#      - ESPHOME_DASHBOARD_USE_PING=true
       - TZ=Australia/Hobart
-    user: "${PUID}:${PGID}"
+#    user: "${PUID}:${PGID}"
+    devices:
+      # Make sure this matched your adapter location
+      - /dev/serial/by-id/usb-Silicon_Labs_CP2104_USB_to_UART_Bridge_Controller_01572719-if00-port0:/dev/ttyUSB1
