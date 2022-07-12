@@ -19,8 +19,8 @@ zigbee2mqtt
 
 esphome
 
-
-# Give your user permissions to access /dev/ttyUSB0 on every reboot
+# Zigbee2mqtt
+## Give your user permissions to access /dev/ttyUSB0 on every reboot
 If you are seeing this error
 
 '''
