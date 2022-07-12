@@ -47,6 +47,13 @@ KERNEL=="ttyACM[0-9]*",MODE="0666"
     
 Unplug the device and replug it, and it should be read/write from any user!
 
+# ESPhome
+Moving esphome to standalone stack
+## Running esphome as a non-root user has error "Permission denied: '/.platformio'"
+This is the fix for the permission denied error, https://discord.com/channels/429907082951524364/973801881518346300/974135937481207820
+
+## Running esphome using host mode, the mDNS doesn't work
+esphome can't resolve esp device IP, using macvlan fixed it
 
 ## Please refer to this site if you need detailed setup
 https://iotechonline.com/home-assistant-install-with-docker-compose
