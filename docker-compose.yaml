@@ -74,6 +74,9 @@ services:
       - "/var/run/docker.sock:/var/run/docker.sock"
       - "./portainer/portainer_data:/data"
     image: portainer/portainer-ce
+    command: --no-auth
+    environment:
+      TZ: "Australia/Hobart"
   zigbee2mqtt:
     container_name: zigbee2mqtt
     image: koenkk/zigbee2mqtt
@@ -89,7 +92,6 @@ services:
     devices:
       # Make sure this matched your adapter location
       - /dev/serial/by-id/usb-ITead_Sonoff_Zigbee_3.0_USB_Dongle_Plus_1233a05dba5fec11ad86395f25bfaa52-if00-port0:/dev/ttyUSB0
-      #- /dev/serial/by-id/usb-ITead_Sonoff_Zigbee_3.0_USB_Dongle_Plus_1233a05dba5fec11ad86395f25bfaa52-if00-port0:/dev/serial/by-id/usb-ITead_Sonoff_Zigbee_3.0_USB_Dongle_Plus_1233a05dba5fec11ad86395f25bfaa52-if00-port0
     user: "${PUID}:${PGID}"
   vscode:
     container_name: vscode
@@ -102,35 +104,8 @@ services:
       - TZ=Australia/Hobart
 #      - PASSWORD="${VSCODE_PASSWORD}"
 #      - PASSWORD=password
-#      - HOMEASSISTANT_URL=http://localhost:8123
     volumes:
       - "./vscode/config:/home/coder/.config"
       - "./vscode:/home/coder/.local/share/code-server"
       - ".:/home/coder/project"
     user: "${PUID}:${PGID}"
-#    command: code-server --auth password --disable-telemetry /home/coder/project
-#   esphome:
-#     container_name: esphome
-#     image: esphome/esphome
-#     volumes:
-#       - "./esphome/config:/config:rw"
-#       - "./esphome/cache:/cache:rw"
-#       - "/etc/localtime:/etc/localtime:ro"
-#     restart: unless-stopped
-#     network_mode: host
-#     ports:
-#       - 6052:6052
-#     environment:
-#       - PLATFORMIO_CORE_DIR=/cache/platformio
-#       - PLATFORMIO_GLOBALLIB_DIR=/cache/platformio/lib
-#       - PLATFORMIO_SETTING_ENABLE_TELEMETRY=No
-#       - PLATFORMIO_SETTING_CHECK_PLATFORMIO_INTERVAL=665
-#       - PLATFORMIO_SETTING_CHECK_PLATFORMS_INTERVAL=666
-#       - PLATFORMIO_SETTING_CHECK_LIBRARIES_INTERVAL=667
-#       - TZ=Australia/Hobart
-#       - VIRTUAL_HOST=esphome.local
-# #    command: dashboard /config --password '123456'
-#     user: "${PUID}:${PGID}"
-# #    devices:
-#       # Make sure this matched your adapter location
-# #      - /dev/serial/by-id/usb-Silicon_Labs_CP2104_USB_to_UART_Bridge_Controller_01572719-if00-port0:/dev/ttyUSB1
