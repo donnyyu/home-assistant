@@ -7,7 +7,7 @@ services:
       - "./config:/config:rw"
       - "./cache:/cache:rw"
       - "/etc/localtime:/etc/localtime:ro"
-    restart: always
+    restart: unless-stopped
     networks:
       esphome_vlan:
         ipv4_address: 192.168.50.5   # <-- Update
