@@ -1,5 +1,5 @@
 # Home Assistant
-OS: Ubuntu 20.10
+Platform: Proxmox -- Ubuntu 20.10 vm
 
 home-assistant docker-compose method
 
