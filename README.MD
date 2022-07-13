@@ -1,8 +1,6 @@
 # Home Assistant
 Platform: Proxmox -- Ubuntu 20.10 vm
 
-home-assistant docker-compose method
-
 configurator
 
 mariadb
