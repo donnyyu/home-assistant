@@ -3,6 +3,7 @@ services:
   esphome:
     container_name: esphome
     image: esphome/esphome
+    user: 1000:1000
     volumes:
       - "./config:/config:rw"
       - "./cache:/cache:rw"
@@ -23,7 +24,7 @@ services:
       - TZ=Australia/Hobart
       - VIRTUAL_HOST=esphome.local
 #    command: dashboard /config --password '123456'
-    user: "${PUID}:${PGID}"
+#    user: "${PUID}:${PGID}"
 networks:
   esphome_vlan:
     driver: macvlan

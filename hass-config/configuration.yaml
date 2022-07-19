@@ -28,7 +28,7 @@ panel_iframe:
   esphome:
     title: ESPhome
     icon: mdi:chip
-    url: http://192.168.50.5:6052/
+    url: http://192.168.50.202:6052/
     require_admin: true  
 #mqtt:
 #  broker: 192.168.50.202
@@ -39,3 +39,14 @@ recorder:
   include:
     domains:
       - sensor
+
+
+# # Logging
+# logger:
+#   default: warning
+#   logs:
+#     homeassistant.helpers.script: debug
+#     homeassistant.components.pydaikin: debug
+#     homeassistant.components.daikin: debug
+#     homeassistant.components.climate: debug
+#     pydaikin: debug

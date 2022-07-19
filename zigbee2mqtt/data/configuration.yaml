@@ -6,9 +6,12 @@ mqtt:
   base_topic: zigbee2mqtt
   server: mqtt://192.168.50.202:1883
 serial:
-  #port: /dev/serial/by-id/usb-ITead_Sonoff_Zigbee_3.0_USB_Dongle_Plus_1233a05dba5fec11ad86395f25bfaa52-if00-port0
   port: /dev/ttyUSB0
 devices:
   '0x00158d0003502734':
     friendly_name: TempHumi-sensor
     availability: true
+  '0x00158d0002fbeaa3':
+    friendly_name: Mi-remote-switch
+    legacy: false
+

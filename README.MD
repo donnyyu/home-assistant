@@ -51,7 +51,9 @@ Moving esphome to standalone stack
 This is the fix for the permission denied error, https://discord.com/channels/429907082951524364/973801881518346300/974135937481207820
 
 ## Running esphome using host mode, the mDNS doesn't work
-esphome can't resolve esp device IP, using macvlan fixed it
+I had "Error resolving IP address of esp32.local" “Error resolving address with mDNS” issue, and my esp32 devices are always on offline state
+1. using macvlan fixed it, run esphome in a seperate stack
+2. run flungo/avahi container and enable REFLECTOR_ENABLE_REFLECTOR also fix it
 
 ## Please refer to this site if you need detailed setup
 https://iotechonline.com/home-assistant-install-with-docker-compose
